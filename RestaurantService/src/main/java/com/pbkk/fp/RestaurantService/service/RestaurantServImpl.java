@@ -19,6 +19,26 @@ public class RestaurantServImpl implements RestaurantServ{
 	public Iterable<Restaurant> getAllRestaurants() {
 		return restaurantRepository.findAll();
 	}
+	
+	@Override
+	public Restaurant save(Restaurant data) {
+		return restaurantRepository.save(data);
+	}
+
+	@Override
+	public void deleteById(Long id) {
+		restaurantRepository.deleteById(id);
+	}
+
+	@Override
+	public Iterable<Restaurant> findAll() {
+		return restaurantRepository.findAll();
+	}
+
+	@Override
+	public Optional<Restaurant> findById(Long id) {
+		return restaurantRepository.findById(id);
+	}
 
 	
 }
