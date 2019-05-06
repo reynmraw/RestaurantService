@@ -1,8 +1,10 @@
 package com.pbkk.fp.RestaurantService.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
-public class Restaurant {
+public class Restaurant implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
