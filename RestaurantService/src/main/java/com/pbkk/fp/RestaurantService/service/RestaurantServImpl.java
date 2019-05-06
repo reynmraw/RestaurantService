@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import com.pbkk.fp.RestaurantService.entity.Restaurant;
 import com.pbkk.fp.RestaurantService.service.RestaurantServ;
-import com.pbkk.fp.RestaurantService.repository.RestaurantRepository;;
+import com.pbkk.fp.RestaurantService.repository.RestaurantRepository;
 
 @Component("restaurantService")
 public class RestaurantServImpl implements RestaurantServ{
