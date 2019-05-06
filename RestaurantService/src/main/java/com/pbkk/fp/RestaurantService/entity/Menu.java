@@ -6,12 +6,19 @@ import javax.persistence.*;
 @Table(name="menu")
 public class Menu extends Restaurant{
 	@ManyToOne
-	@JoinColumn(referencedColumnName="id")
+	@JoinColumn(name="users_id", referencedColumnName="id")
 	private Restaurant restaurant;
 	private String namaMakan;
 	private String deskripsi;
+	
 	public String getNamaMakan() {
 		return namaMakan;
+	}
+	public Restaurant getRestaurant() {
+		return restaurant;
+	}
+	public void setRestaurant(Restaurant restaurant) {
+		this.restaurant = restaurant;
 	}
 	public void setNamaMakan(String namaMakan) {
 		this.namaMakan = namaMakan;
