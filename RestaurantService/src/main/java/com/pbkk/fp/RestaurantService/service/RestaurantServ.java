@@ -1,9 +1,9 @@
 package com.pbkk.fp.RestaurantService.service;
 
-import java.util.List;
+/*import java.util.Optional;*/
 
 import com.pbkk.fp.RestaurantService.entity.Restaurant;
 
 public interface RestaurantServ {
-	public List<Restaurant> getAllRestaurant();
+	public Iterable<Restaurant> getAllRestaurants();	
 }
