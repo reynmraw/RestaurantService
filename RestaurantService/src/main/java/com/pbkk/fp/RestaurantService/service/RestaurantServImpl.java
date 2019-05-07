@@ -13,12 +13,6 @@ import com.pbkk.fp.RestaurantService.repository.RestaurantRepository;
 public class RestaurantServImpl implements RestaurantServ{
 	@Autowired
 	private RestaurantRepository restaurantRepository;
-	
-	
-	/*
-	 * @Override public Iterable<Restaurant> getAllRestaurants() { return
-	 * restaurantRepository.findAll(); }
-	 */
 
 	@Override
 	public void deleteById(Long id) {
@@ -34,18 +28,10 @@ public class RestaurantServImpl implements RestaurantServ{
 	public Optional<Restaurant> findById(Long id) {
 		return restaurantRepository.findById(id);
 	}
-
+	
 	@Override
-	public Object save(Object data) {
-		// TODO Auto-generated method stub
-		return null;
+	public Restaurant save(Restaurant data) {
+		return restaurantRepository.save(data);
 	}
-
-	@Override
-	public Object update(Object data) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	
 }

@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
-@EntityScan("com.pbkk.fp.RestaurantService.entity")
 @ComponentScan("com.pbkk.fp.RestaurantService")
 @SpringBootApplication
 public class RestaurantServiceApplication {

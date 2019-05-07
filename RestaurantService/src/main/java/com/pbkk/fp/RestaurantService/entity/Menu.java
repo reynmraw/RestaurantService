@@ -8,7 +8,7 @@ public class Menu extends Restaurant{
 	@Id
 	private Long id;
 	@ManyToOne
-	@JoinColumn(name="users_id", referencedColumnName="id")
+	@JoinColumn(name="makan_id", referencedColumnName="id")
 	private Restaurant restaurant;
 	private String namaMakan;
 	private String deskripsi;

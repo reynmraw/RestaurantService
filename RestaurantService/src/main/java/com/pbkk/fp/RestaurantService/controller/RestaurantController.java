@@ -8,12 +8,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pbkk.fp.RestaurantService.entity.Restaurant;
 import com.pbkk.fp.RestaurantService.service.RestaurantServ;
 
 @RestController
+@RequestMapping("/restaurants")
 public class RestaurantController {
 	@Autowired
 	private RestaurantServ restaurantServ;
@@ -32,7 +34,7 @@ public class RestaurantController {
 	@PostMapping("/restaurants") 
 	public Restaurant postRestaurant(
 			@ModelAttribute Restaurant Restaurant) {
-		return (com.pbkk.fp.RestaurantService.entity.Restaurant) restaurantServ.save(Restaurant);
+		return restaurantServ.save(Restaurant);
 	}
 	
 	@PutMapping("/restaurants/{id}")
@@ -40,7 +42,7 @@ public class RestaurantController {
 			@PathVariable Long id, 
 			@ModelAttribute Restaurant Restaurant) {
 		Restaurant.setId(id);
-		return (com.pbkk.fp.RestaurantService.entity.Restaurant) restaurantServ.save(Restaurant);
+		return restaurantServ.save(Restaurant);
 	}
 	
 	@DeleteMapping("/restaurants/{id}")

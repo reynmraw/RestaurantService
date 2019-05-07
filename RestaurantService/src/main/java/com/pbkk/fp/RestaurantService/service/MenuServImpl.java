@@ -32,20 +32,8 @@ public class MenuServImpl implements MenuServ {
 	}
 
 	@Override
-	public Object save(Object data) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Object update(Object data) {
-		// TODO Auto-generated method stub
-		return null;
+	public Menu save(Menu data) {
+		return menuRepository.save(data);
 	}
 	
-	/*
-	 * @Override public Iterable<Menu> getAllMenu() { return
-	 * menuRepository.findAll(); }
-	 */
-	
-	}
+}
