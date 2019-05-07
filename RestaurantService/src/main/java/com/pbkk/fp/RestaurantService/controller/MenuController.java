@@ -15,6 +15,6 @@ public class MenuController {
 	
 	@GetMapping("/menu")
 	public Iterable<Menu> getAllMenu(){
-		return menuServ.getAllMenu();
+		return menuServ.findAll();
 	}
 }

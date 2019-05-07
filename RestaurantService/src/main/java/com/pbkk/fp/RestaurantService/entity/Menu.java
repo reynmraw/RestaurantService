@@ -5,6 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name="menu")
 public class Menu extends Restaurant{
+	@Id
+	private Long id;
 	@ManyToOne
 	@JoinColumn(name="users_id", referencedColumnName="id")
 	private Restaurant restaurant;

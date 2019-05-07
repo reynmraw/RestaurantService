@@ -32,7 +32,7 @@ public class RestaurantController {
 	@PostMapping("/restaurants") 
 	public Restaurant postRestaurant(
 			@ModelAttribute Restaurant Restaurant) {
-		return restaurantServ.save(Restaurant);
+		return (com.pbkk.fp.RestaurantService.entity.Restaurant) restaurantServ.save(Restaurant);
 	}
 	
 	@PutMapping("/restaurants/{id}")
@@ -40,7 +40,7 @@ public class RestaurantController {
 			@PathVariable Long id, 
 			@ModelAttribute Restaurant Restaurant) {
 		Restaurant.setId(id);
-		return restaurantServ.save(Restaurant);
+		return (com.pbkk.fp.RestaurantService.entity.Restaurant) restaurantServ.save(Restaurant);
 	}
 	
 	@DeleteMapping("/restaurants/{id}")

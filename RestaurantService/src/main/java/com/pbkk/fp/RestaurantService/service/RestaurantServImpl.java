@@ -9,21 +9,16 @@ import com.pbkk.fp.RestaurantService.entity.Restaurant;
 import com.pbkk.fp.RestaurantService.service.RestaurantServ;
 import com.pbkk.fp.RestaurantService.repository.RestaurantRepository;
 
-@Component("restaurantService")
+@Component("restaurantServ")
 public class RestaurantServImpl implements RestaurantServ{
 	@Autowired
 	private RestaurantRepository restaurantRepository;
 	
 	
-	@Override
-	public Iterable<Restaurant> getAllRestaurants() {
-		return restaurantRepository.findAll();
-	}
-	
-	@Override
-	public Restaurant save(Restaurant data) {
-		return restaurantRepository.save(data);
-	}
+	/*
+	 * @Override public Iterable<Restaurant> getAllRestaurants() { return
+	 * restaurantRepository.findAll(); }
+	 */
 
 	@Override
 	public void deleteById(Long id) {
@@ -38,6 +33,18 @@ public class RestaurantServImpl implements RestaurantServ{
 	@Override
 	public Optional<Restaurant> findById(Long id) {
 		return restaurantRepository.findById(id);
+	}
+
+	@Override
+	public Object save(Object data) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Object update(Object data) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	
