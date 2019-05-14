@@ -24,10 +24,11 @@ public class Restaurant implements Serializable{
 	private Long id;
 	private String nama;
 	private String alamat;
-	private Integer noTelp;
+	private String noTelp;
 	private String email;
 	private Float latitude;
 	private Float longitude;
+	private byte[] profile;
 	
 	public String getNama() {
 		return nama;
@@ -53,10 +54,10 @@ public class Restaurant implements Serializable{
 	public void setMenu(Menu menu) {
 		this.menu = menu;
 	}*/
-	public Integer getNoTelp() {
+	public String getNoTelp() {
 		return noTelp;
 	}
-	public void setNoTlp(Integer noTelp) {
+	public void setNoTelp(String noTelp) {
 		this.noTelp = noTelp;
 	}
 	public String getEmail() {
@@ -76,5 +77,11 @@ public class Restaurant implements Serializable{
 	}
 	public void setLatitude(Float latitude) {
 		this.latitude = latitude;
+	}
+	public byte[] getProfile() {
+		return profile;
+	}
+	public void setProfile(byte[] profile) {
+		this.profile = profile;
 	}
 }
