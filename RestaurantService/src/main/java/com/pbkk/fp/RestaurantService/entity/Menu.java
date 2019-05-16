@@ -18,6 +18,7 @@ public class Menu implements Serializable {
 	
 	private String namaMakan;
 	private String deskripsi;
+	private Integer stok;
 	@ManyToOne
 	private Restaurant restaurant;
 	//private String alamat;
@@ -46,6 +47,12 @@ public class Menu implements Serializable {
 	}
 	public void setId(Long id) {
 		this.id = id;
+	}
+	public Integer getStok() {
+		return stok;
+	}
+	public void setStok(Integer stok) {
+		this.stok = stok;
 	}
 	/*public String getAlamat() {
 		return alamat;
