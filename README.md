@@ -7,11 +7,11 @@
 # Documentation
 https://documenter.getpostman.com/view/7199813/S1M3v5Aq
 # Endpoints
-## Base url for restaurant :
+### Base url for restaurant :
 - https://pbkkresserv.southeastasia.cloudapp.azure.com/restaurants => GET | POST
 - https://pbkkresserv.southeastasia.cloudapp.azure.com/restaurants/{id} => GET | PUT | DELETE
 
-## Base url for menu : 
+### Base url for menu : 
 - https://pbkkresserv.southeastasia.cloudapp.azure.com/menu => GET | POST
 - https://pbkkresserv.southeastasia.cloudapp.azure.com/menu/{id} => PUT | GET | DELETE
 
