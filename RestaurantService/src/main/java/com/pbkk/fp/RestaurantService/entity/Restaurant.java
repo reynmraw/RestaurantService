@@ -1,8 +1,6 @@
 package com.pbkk.fp.RestaurantService.entity;
 
 import java.io.Serializable;
-//import com.pbkk.fp.RestaurantService.connect.GetRequest;
-//import com.pbkk.fp.RestaurantService.connect.GetRequest;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +11,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
+//import com.pbkk.fp.RestaurantService.connect.GetRequest;
 
 @Entity
 @Table(name="restaurant")
@@ -24,10 +23,13 @@ public class Restaurant implements Serializable{
 				inverseJoinColumns=@JoinColumn(name="restaurant"))
 	//private Menu menu;
 	private Long id;
+	private String nama;
+	private String alamat;	
 	private String promo;
+	private String noTelp;
 	private Float latitude;
 	private Float longitude;
-	//private GetRequest idresto;
+	//private GetRequest mapResto;
 	
 	public Long getId() {
 		return id;
@@ -53,8 +55,22 @@ public class Restaurant implements Serializable{
 	public void setPromo(String promo) {
 		this.promo = promo;
 	}
-	/*public GetRequest getGetRequest() {
-		return idresto;
-	}*/
-	
+	public String getNama() {
+		return nama;
+	}
+	public void setNama(String nama) {
+		this.nama = nama;
+	}
+	public String getAlamat() {
+		return alamat;
+	}
+	public void setAlamat(String Alamat) {
+		this.alamat = alamat;
+	}
+	public String getNoTelp() {
+		return noTelp;
+	}
+	public void setNoTelp(String noTelp) {
+		this.noTelp = noTelp;
+	}
 }
