@@ -15,7 +15,7 @@ import com.pbkk.fp.RestaurantService.entity.Menu;
 import com.pbkk.fp.RestaurantService.service.MenuServ;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/menu")
 public class MenuController {
 	@Autowired
 	private MenuServ menuServ;

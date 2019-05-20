@@ -15,7 +15,7 @@ import com.pbkk.fp.RestaurantService.entity.Restaurant;
 import com.pbkk.fp.RestaurantService.service.RestaurantServ;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/restaurants")
 public class RestaurantController {
 	@Autowired
 	private RestaurantServ restaurantServ;
