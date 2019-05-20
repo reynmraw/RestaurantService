@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -22,49 +23,16 @@ public class Restaurant implements Serializable{
 				inverseJoinColumns=@JoinColumn(name="restaurant"))
 	//private Menu menu;
 	private Long id;
-	private String nama;
-	private String alamat;
-	private String noTelp;
-	private String email;
+	private String promo;
 	private Float latitude;
 	private Float longitude;
-	private byte[] profile;
+	@OneToMany
 	
-	public String getNama() {
-		return nama;
-	}
-	public void setNama(String nama) {
-		this.nama = nama;
-	}
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
-	}
-	public String getAlamat() {
-		return alamat;
-	}
-	public void setAlamat(String alamat) {
-		this.alamat = alamat;
-	}
-	/*public Menu getMenu() {
-		return menu;
-	}
-	public void setMenu(Menu menu) {
-		this.menu = menu;
-	}*/
-	public String getNoTelp() {
-		return noTelp;
-	}
-	public void setNoTelp(String noTelp) {
-		this.noTelp = noTelp;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
 	}
 	public Float getLongitude() {
 		return longitude;
@@ -78,10 +46,11 @@ public class Restaurant implements Serializable{
 	public void setLatitude(Float latitude) {
 		this.latitude = latitude;
 	}
-	public byte[] getProfile() {
-		return profile;
+	public String getPromo() {
+		return promo;
 	}
-	public void setProfile(byte[] profile) {
-		this.profile = profile;
+	public void setPromo(String promo) {
+		this.promo = promo;
 	}
+	
 }
