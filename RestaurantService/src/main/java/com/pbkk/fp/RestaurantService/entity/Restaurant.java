@@ -23,12 +23,14 @@ public class Restaurant implements Serializable{
 	//private Menu menu;
 	private Long id;
 	private String nama;
+	private String pemilik;
+	private String deskripsi;
 	private String alamat;
-	private String noTelp;
-	private String email;
-	private Float latitude;
-	private Float longitude;
-	private byte[] profile;
+	private Boolean isPremium;
+	/*
+	 * private String noTelp; private String email; private Float latitude; private
+	 * Float longitude; private byte[] profile;
+	 */
 	
 	public String getNama() {
 		return nama;
@@ -48,40 +50,39 @@ public class Restaurant implements Serializable{
 	public void setAlamat(String alamat) {
 		this.alamat = alamat;
 	}
+	public String getPemilik() {
+		return pemilik;
+	}
+	public void setPemilik(String pemilik) {
+		this.pemilik = pemilik;
+	}
+	public String getDeskripsi() {
+		return deskripsi;
+	}
+	public void setDeskripsi(String deskripsi) {
+		this.deskripsi = deskripsi;
+	}
+	public Boolean getIsPremium() {
+		return isPremium;
+	}
+	public void setIsPremium(Boolean isPremium) {
+		this.isPremium = isPremium;
+	}
+	
 	/*public Menu getMenu() {
 		return menu;
 	}
 	public void setMenu(Menu menu) {
 		this.menu = menu;
 	}*/
-	public String getNoTelp() {
-		return noTelp;
-	}
-	public void setNoTelp(String noTelp) {
-		this.noTelp = noTelp;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public Float getLongitude() {
-		return longitude;
-	}
-	public void setLongitude(Float longitude) {
-		this.longitude = longitude;
-	}
-	public Float getLatitude() {
-		return latitude;
-	}
-	public void setLatitude(Float latitude) {
-		this.latitude = latitude;
-	}
-	public byte[] getProfile() {
-		return profile;
-	}
-	public void setProfile(byte[] profile) {
-		this.profile = profile;
-	}
+	/*
+	 * public String getNoTelp() { return noTelp; } public void setNoTelp(String
+	 * noTelp) { this.noTelp = noTelp; } public String getEmail() { return email; }
+	 * public void setEmail(String email) { this.email = email; } public Float
+	 * getLongitude() { return longitude; } public void setLongitude(Float
+	 * longitude) { this.longitude = longitude; } public Float getLatitude() {
+	 * return latitude; } public void setLatitude(Float latitude) { this.latitude =
+	 * latitude; } public byte[] getProfile() { return profile; } public void
+	 * setProfile(byte[] profile) { this.profile = profile; }
+	 */
 }
