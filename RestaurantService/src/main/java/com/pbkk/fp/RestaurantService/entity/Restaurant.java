@@ -1,7 +1,8 @@
 package com.pbkk.fp.RestaurantService.entity;
 
 import java.io.Serializable;
-
+//import com.pbkk.fp.RestaurantService.connect.GetRequest;
+//import com.pbkk.fp.RestaurantService.connect.GetRequest;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +27,7 @@ public class Restaurant implements Serializable{
 	private String promo;
 	private Float latitude;
 	private Float longitude;
-	@OneToMany
+	//private GetRequest idresto;
 	
 	public Long getId() {
 		return id;
@@ -52,5 +53,8 @@ public class Restaurant implements Serializable{
 	public void setPromo(String promo) {
 		this.promo = promo;
 	}
+	/*public GetRequest getGetRequest() {
+		return idresto;
+	}*/
 	
 }
