@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="menu")
 public class Menu implements Serializable {
-	/**
+	/*
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -19,6 +19,7 @@ public class Menu implements Serializable {
 	private String namaMakan;
 	private String deskripsi;
 	private Integer stok;
+	private String harga;
 	@ManyToOne
 	private Restaurant restaurant;
 	//private String alamat;
@@ -53,6 +54,12 @@ public class Menu implements Serializable {
 	}
 	public void setStok(Integer stok) {
 		this.stok = stok;
+	}
+	public String getHarga() {
+		return harga;
+	}
+	public void setHarga(String harga) {
+		this.harga = harga;
 	}
 	/*public String getAlamat() {
 		return alamat;
