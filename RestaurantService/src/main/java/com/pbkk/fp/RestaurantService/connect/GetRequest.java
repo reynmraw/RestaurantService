@@ -8,10 +8,12 @@ import java.net.URL;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.mysql.cj.xdevapi.JsonArray;
+
 public class GetRequest {
 	public static void main(String[] args) {
 		 try {
-		   String access_token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXN0b21lciIsInVzZXJfdHlwZSI6InVzZXIiLCJ1c2VyX25hbWUiOiJjdXN0b21lciIsInNjb3BlIjpbInJlYWRfcmVzdGF1cmFudCJdLCJleHAiOjE1NTg0MjM3MDIsImF1dGhvcml0aWVzIjpbIlVzZXIiXSwianRpIjoiYzNhMzdkYjctN2I4ZS00ZWMzLTg5NjktNzE3YmI1MDdhNGY1IiwiY2xpZW50X2lkIjoicmVzdGF1cmFudCJ9.qz8NDSduTGSnpSpHHjXR6YShMaIyhYlh6RM3awW4hT0";
+		   String access_token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJfdHlwZSI6InVzZXIiLCJ1c2VyX25hbWUiOiJjdXN0b21lciIsInNjb3BlIjpbInJlYWRfcmVzdGF1cmFudCJdLCJleHAiOjE1NTg0NTY2MTYsImF1dGhvcml0aWVzIjpbIlVzZXIiXSwianRpIjoiNGMzY2FjZTYtZDExNS00OWRkLTk0OTktZmMzYWFmMjk2ZmFlIiwiY2xpZW50X2lkIjoicmVzdGF1cmFudCJ9.bTsw4udwkBhWseUQ0rcYViJlS7HulCyBRS5tnwSTZLk";
 		   String url = "https://rendoru.com/kuliah/pbkk/restaurants";
 		   URL obj = new URL(url);
 		   HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -28,21 +30,45 @@ public class GetRequest {
 		   String inputLine;
 		   StringBuffer response = new StringBuffer();
 		   while ((inputLine = in.readLine()) != null) {
-		    response.append(inputLine);
+			   //int i = inputLine.indexOf("{");
+			   //int o = inputLine.indexOf("}");
+			   response.append(inputLine);
 		   }
 		   in.close();
 		   //print result
 		   System.out.println(response.toString());
-
-
-		   JSONArray jsonArray = new JSONArray(response.toString());
-	   		for (int i = 0; i < jsonArray.length(); i++) {
-				if (jsonArray.get(i) instanceof JSONObject) {
-					JSONObject jsonObj = (JSONObject)jsonArray.get(i);
-					System.out.println((Integer)jsonObj.get("id"));
-					System.out.println((String)jsonObj.get("nama"));
-				}
-			}
+		   
+		   /*try {
+			   String inputLine;
+			   StringBuffer response = new StringBuffer();
+			   while ((inputLine = in.readLine()) != null) {
+				   int i = inputLine.indexOf("{");
+				   response.append(inputLine.substring(i));
+			   }
+			   in.close();
+			   //print result
+			   System.out.println(response.toString());
+			   //response = response.substring(i);
+			   JSONObject obj_JSONObject = new JSONObject(response.toString());
+			   JSONObject obj_JsonObject2 = (JSONObject)obj_JsonObject2.get("id");
+			   //JSONArray obj_JSONArray = obj_JSONObject.getJSONArray("id");
+			   //System.out.println();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
+		   
+		   
+			
+			  JSONArray jsonArray = new JSONArray(response.toString()); 
+			  for (int i = 0; i < jsonArray.length(); i++) { 
+				  if (jsonArray.get(i) instanceof JSONObject) {
+					  JSONObject jsonObj = (JSONObject)jsonArray.get(i);
+					  Integer idresto = (Integer)jsonObj.get("id");
+					  System.out.println(idresto);
+					  System.out.println((String)jsonObj.get("nama")); 
+					  } 
+				  }
+			 
 	   
 	   /*JSONObject jsonObj = new JSONObject(response.toString());
 	   System.out.println(jsonObj.getString("id\n"));
